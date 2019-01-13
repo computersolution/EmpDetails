@@ -4,7 +4,7 @@
 	This Employee Details project is developed to create an endpoints for Create,Update,Delete,Fetch and finally filter 
 	the employee list based on their age limit.
 
-# Getting Started:
+# Getting Started
 # Prerequisites
 	Recommended Java Version : 1.8 and above
 	IDE : Eclipse (or) STS
