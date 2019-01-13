@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource("classpath:application.properties")
 public class CreateDirectoryServiceImpl {
+	private static final Logger logger = LoggerFactory.getLogger(CreateDirectoryServiceImpl.class);
 	@Value("${app.filedir}")
 	private String filedir;
 	
@@ -23,10 +26,10 @@ public class CreateDirectoryServiceImpl {
 		File dir = new File(filedir);
 		if (!dir.exists()) {
 			
-				if (dir.mkdir()) {					
-					System.out.println("Directory is created!");
+				if (dir.mkdir()) {		
+					logger.info("Directory is created!");
 				} else {
-					System.out.println("Failed to create directory!");
+					logger.info("Failed to create directory!");
 				}			
 		}
 		File file = new File(filedir+filename);
@@ -36,9 +39,9 @@ public class CreateDirectoryServiceImpl {
 					FileWriter filewriter = new FileWriter(file);
 					filewriter.write("[]");
 					filewriter.close();
-					System.out.println("File is created!");
+					logger.info("File is created!");
 				} else {
-					System.out.println("Failed to create File!");
+					logger.info("Failed to create File!");
 				}
 				
 			} catch (IOException e) {
