@@ -37,8 +37,7 @@
 ## Create An EmployeeList:
 	http://localhost:8080/admin/createEmployeeList
 	#Example Data:
-		[{"id":101,"fullName":"TestUser-101","age":30,"salary":50000.0},{"id":102,"fullName":"TestUser-	    	102","age":40,"salary":50000.0},
-		{"id":103,"fullName":"TestUser-103","age":50,"salary":50000.0},{"id":104,"fullName":"TestUser-104","age":60,"salary":50000.0}]
+		[{"id":101,"fullName":"TestUser-101","age":30,"salary":50000.0},{"id":102,"fullName":"TestUser102","age":40,"salary":50000.0},{"id":103,"fullName":"TestUser-103","age":50,"salary":50000.0},{"id":104,"fullName":"TestUser-104","age":60,"salary":50000.0}]
 ## Update An EmployeeList:
 ###### Note : id Can't be updated and based on the id the remaining fields will be updated.
 	http://localhost:8080/admin/updateEmployeeList
